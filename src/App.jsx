@@ -3,15 +3,15 @@ import { Routes, Route, Navigate, Link, NavLink, useNavigate, useSearchParams } 
 import { LayoutDashboard, BookOpen, CalendarCheck, Wallet, FileText, ClipboardCheck, ChevronLeft, ChevronRight, ChevronDown, Eye, EyeOff, Search, MessageSquare, Hash, Award, MapPin, MousePointerClick, Clock, GraduationCap, Copy, Calendar, XCircle, CheckCircle2, Upload, Pencil, User, Sun, Moon, LogOut, Users, Plus, ToggleRight, AlertTriangle, Mail, CheckCheck, Book, Columns2, CalendarDays } from 'lucide-react';
 
 const LOGO = 'https://lms.saylanimit.com/assets/logo.6lrMPvRL.png';
-const PIC = 'https://res.cloudinary.com/saylani-welfare/image/upload/v1765082518/SMIT/Students/4260303603639.jpg';
-const SNAME = 'Abdul Wadood';
+const PIC = 'https://hasnainmurtaza.vercel.app/images/hasnainmurtaza.jpeg';
+const SNAME = 'Hasnain Murtaza';
 const TPIC = 'https://media.licdn.com/dms/image/v2/D4D03AQEJIqAFm_yQFg/profile-displayphoto-scale_200_200/B4DZlUgVm0JQAc-/0/1758059389642?e=2147483647&v=beta&t=eRZZR1SfdLpx8uM9GpiUp1v69IXdbWZXQ6ZCHV3-ZcU';
 const TNAME = 'Muzammil Javed';
 const COURSE = 'Modern Web Application Development';
 const toast = m => { const d = document.createElement('div'); d.className = 'toast'; d.textContent = m; document.body.appendChild(d); setTimeout(() => d.remove(), 2600) };
 const T = createContext();
 const getAuth = () => JSON.parse(localStorage.getItem('auth') || 'null');
-const users = () => JSON.parse(localStorage.getItem('users') || '{"4260303603639":"12345678"}');
+const users = () => JSON.parse(localStorage.getItem('users') || '{"1111111111111":"12345678"}');
 const Guard = ({ role, children }) => { const a = getAuth(); return a && a.role === role ? children : <Navigate to={role === 't' ? '/trainer/login' : '/login'} replace /> };
 
 /* ---------- data ---------- */
@@ -19,10 +19,10 @@ const stat = [['Total Classes', 148], ['Present', 98], ['Leave', 0], ['Absent', 
 const mods = [['Web Designing', 20, 20], ['Front-End Development', 27, 31], ['Modern Front-End Development', 10, 14], ['Back-End Development', 1, 16]];
 const assigns = [['test', '', 0, 'September 25, 2026', 'NOT SUBMITTED', 0], ['Student Portal', '', 0, 'September 24, 2026', 'NOT SUBMITTED', 'closed'], ['Admin panel (E commerce Dashboard)', '', 7, 'September 10, 2026', 'NOT SUBMITTED', 0], ['QUICKSERVE WMA (Batch-20)', 'HACKATHON', 0, 'August 30, 2026', 'NOT SUBMITTED', 'closed'], ['E-Commerce Website (React js)', '', 4, 'August 17, 2026', 'LATE SUBMITTED', 1], ['Furniture E-Commerce Website', '', 5, 'August 10, 2026', 'LATE SUBMITTED', 1], ['JavaScript Assignment', '', 6, 'July 10, 2026', 'SUBMITTED', 1], ['Budgetting App', '', 10, 'June 1, 2026', 'SUBMITTED', 1]];
 const quizzes = [['Javascript (Quiz-4)', 'Modern Front-End Development', '1 / 3', '95%', 'PASSED'], ['Javascript (Quiz-3)', 'Modern Front-End Development', '1 / 3', '65%', 'FAILED'], ['Javascript (Quiz-2)', 'Modern Front-End Development', '1 / 3', '88%', 'PASSED'], ['Javascript (Quiz-1)', 'Modern Front-End Development', '1 / 3', '78%', 'PASSED'], ['CSS Quiz', 'Front-End Development', '3 / 3', '63%', 'FAILED'], ['HTML Quiz', 'Web Designing', '1 / 3', '68%', 'FAILED']];
-const fees = ['Sep', 'Aug', 'Jul', 'Jun', 'May', 'Apr', 'Mar', 'Feb'].map((m, i) => ({ m: m + ' 2026', due: (i ? '08' : '13') + '-' + m + '-2026', v: '2026' + String(9 - i).padStart(2, '0') + '487564' }));
-const first = ['Muhammad', 'Ahmed', 'Ali', 'Hassan', 'Usman', 'Bilal', 'Hamza', 'Zain', 'Fatima', 'Ayesha', 'Maryam', 'Zainab', 'Hira', 'Sana', 'Omar', 'Talha', 'Saad', 'Iqra', 'Areeba', 'Faizan'];
-const last = ['Khan', 'Siddiqui', 'Ansari', 'Qureshi', 'Sheikh', 'Memon', 'Raza', 'Malik', 'Hussain', 'Baig', 'Farooqui', 'Javed'];
-const student = i => i === 0 ? { n: SNAME, r: 487564, e: 'abdulwadoodwd511@gmail.com' } : { n: first[i % 20] + ' ' + last[(i * 7) % 12], r: 487564 + i * 13, e: (first[i % 20] + last[(i * 7) % 12]).toLowerCase() + (100 + i) + '@gmail.com' };
+const fees = ['Sep', 'Aug', 'Jul', 'Jun', 'May', 'Apr', 'Mar', 'Feb'].map((m, i) => ({ m: m + ' 2026', due: (i ? '08' : '13') + '-' + m + '-2026', v: '2026' + String(9 - i).padStart(2, '0') + '774410' }));
+const first = ['Muhammad', 'Ahmed', 'Ali', 'Hassan', 'Usman', 'Bilal', 'Hamza', 'Zain', 'Harram', 'Aliyan', 'Yasir', 'Muneeb', 'Kaif', 'Salman', 'Omar', 'Talha', 'Saad', 'Imran', 'Hassan', 'Faizan'];
+const last = ['Khan', 'Siddiqui', 'Ansari', 'Qureshi', 'Sheikh', 'Memon', 'Raza', 'Malik', 'Sheikh', 'Baig', 'Farooqui', 'Javed'];
+const student = i => i === 0 ? { n: SNAME, r: 774410, e: 'hasnainmurtaza@gmail.com' } : { n: first[i % 20] + ' ' + last[(i * 7) % 12], r: 774410 + i * 13, e: (first[i % 20] + last[(i * 7) % 12]).toLowerCase() + (100 + i) + '@gmail.com' };
 const tAssign = [['Admin panel (E commerce Dashboard)', 'Create the provided UI design in React or nextjs.', ['NextJS', 'ReactJS Introduction'], 'Sep 10, 2026'], ['QUICKSERVE WMA (Batch-20)', 'Challenge: Build a modern service-booking web application that…', [], 'Aug 30, 2026', 'HACKATHON'], ['E-Commerce Website (React js)', 'React.js frontend. Create all required e-commerce…', ['Components , Props'], 'Aug 17, 2026'], ['Furniture E-Commerce Website', 'Follow the Figma design.', ['JavaScript Book Code', 'Github'], 'Aug 10, 2026'], ['JavaScript Assignment', 'Complete all 25 JavaScript questions available at the link…', ['JavaScript Introduction'], 'Jul 10, 2026'], ['Budgetting App', 'Develop a fully responsive and functional Budgeting Web…', ['JavaScript Chapter'], 'Jun 1, 2026'], ['Amazon Clone', 'Create a fully responsive landing page inspired by the official…', ['HTML Text', 'HTML Images'], 'May 24, 2026'], ['NASA Landing Page', 'Create a fully responsive landing page inspired by NASA…', ['Media queries', 'HTML Text'], 'May 1, 2026'], ['Helplytics AI', 'SMIT GRAND CODING NIGHT - April 2026…', [], 'Apr 19, 2026', 'HACKATHON']];
 const tQuiz = [['Javascript (Quiz-4)', 'Jun 24, 2026'], ['Javascript (Quiz-3)', 'Jun 3, 2026'], ['Javascript (Quiz-2)', 'May 18, 2026'], ['Javascript (Quiz-1)', 'Apr 17, 2026'], ['CSS Quiz', 'Mar 27, 2026'], ['HTML Quiz', 'Jan 7, 2026']];
 const attDates = m => { const out = [], mo = { Sep: 8, Aug: 7, Jul: 6 }[m]; for (let d = 1; d <= 31; d++) { const dt = new Date(2026, mo, d); if (dt.getMonth() !== mo) break; if ([1, 3, 5].includes(dt.getDay())) out.push(dt) } return out };
@@ -57,7 +57,7 @@ function Shell({ role, children }) {
 function Pass({ v, set }) { const [o, setO] = useState(false); return <div className="in"><input type={o ? 'text' : 'password'} value={v} onChange={e => set(e.target.value)} />{o ? <EyeOff onClick={() => setO(false)} /> : <Eye onClick={() => setO(true)} />}</div> }
 function Login() {
   const [tab, setTab] = useState('l'), [c, setC] = useState(''), [p, setP] = useState(''), [e, setE] = useState(''), [p2, setP2] = useState(''), nav = useNavigate();
-  const go = x => { x.preventDefault(); if (users()[c] === p) { localStorage.setItem('auth', JSON.stringify({ role: 's', cnic: c })); nav('/courses') } else toast('Invalid CNIC or password. Demo: 4260303603639 / 12345678') };
+  const go = x => { x.preventDefault(); if (users()[c] === p) { localStorage.setItem('auth', JSON.stringify({ role: 's', cnic: c })); nav('/courses') } else toast('Invalid CNIC or password. Demo: 1111111111111 / 12345678') };
   const mk = x => { x.preventDefault(); if (c.length < 13 || p.length < 6 || p !== p2) return toast('Enter a 13-digit CNIC and matching passwords (min 6 characters).'); localStorage.setItem('users', JSON.stringify({ ...users(), [c]: p })); toast('Password created. Please login.'); setTab('l'); setP(''); setP2('') };
   return <div className="center"><img src={LOGO} alt="SMIT" /><h4>Student Portal</h4><div className="wrap">
     <div className="tabs"><button className={tab === 'l' ? 'on' : ''} onClick={() => setTab('l')}>Login</button><button className={tab === 'c' ? 'on' : ''} onClick={() => setTab('c')}>Create Password</button></div>
@@ -67,7 +67,7 @@ function Login() {
 }
 function TLogin() {
   const [e, setE] = useState(''), [p, setP] = useState(''), nav = useNavigate();
-  const go = x => { x.preventDefault(); if (e === 'trainer@smit.com' && p === '12345678') { localStorage.setItem('auth', JSON.stringify({ role: 't' })); nav('/trainer') } else toast('Invalid credentials. Demo: trainer@smit.com / 12345678') };
+  const go = x => { x.preventDefault(); if (e === 'trainer@gmail.com' && p === '12345678') { localStorage.setItem('auth', JSON.stringify({ role: 't' })); nav('/trainer') } else toast('Invalid credentials. Demo: trainer@gmail.com / 12345678') };
   return <div className="center"><img src={LOGO} alt="SMIT" /><h4>Trainer Portal</h4><div className="wrap"><form className="box" onSubmit={go}><h3>Login</h3><p>Kindly provide your email and password to access the trainer portal.</p><label>Email *</label><div className="in"><input value={e} onChange={x => setE(x.target.value)} /></div><label>Password *</label><Pass v={p} set={setP} /><button className="btn">LOGIN</button><button type="button" className="link" onClick={() => toast(e ? 'Password reset link sent to ' + e : 'Enter your email first.')}>Forgot Password?</button></form><Link className="alt" to="/login">Login as student</Link></div></div>;
 }
 
@@ -79,7 +79,7 @@ function Courses() {
 }
 function CourseCard({ btn, times }) {
   return <div className="card course"><div className="hd"><div><h2>{COURSE}</h2>{times && <div className="times"><span>Mon 01:00 PM - 03:00 PM</span><span>Wed 01:00 PM - 03:00 PM</span><span>Fri 01:00 PM - 03:00 PM</span></div>}</div><span className="tag">ENROLLED</span></div>
-    <div className="bd"><div className="pr"><span>Progress</span><span>74% Completed</span></div><Bar p={74} /><div className="meta"><div><Hash size={16} /><b>Batch:</b>20</div><div><Award size={16} /><b>Roll:</b>487564</div><div><MapPin size={16} /><b>Campus:</b>Zaitoon Ashraf IT Park</div><div><MapPin size={16} /><b>City:</b>Karachi</div></div>
+    <div className="bd"><div className="pr"><span>Progress</span><span>74% Completed</span></div><Bar p={74} /><div className="meta"><div><Hash size={16} /><b>Batch:</b>20</div><div><Award size={16} /><b>Roll:</b>774410</div><div><MapPin size={16} /><b>Campus:</b>Zaitoon Ashraf IT Park</div><div><MapPin size={16} /><b>City:</b>Karachi</div></div>
       {btn && <button className="vd" onClick={btn}><MousePointerClick size={18} />View Details</button>}</div></div>
 }
 function Dashboard() {
@@ -97,7 +97,7 @@ function Payment() { return <Shell role="s"><Crumb items={['Home', COURSE, 'Paym
 function Attendance() {
   const [m, setM] = useState('Sep'), ds = attDates(m);
   return <Shell role="s"><Crumb items={['Home', COURSE, 'Attendance']} /><div className="stats" style={{ gridTemplateColumns: 'repeat(4,1fr)' }}>{stat.map(([l, n], i) => <Stat key={l} n={n} l={l} I={[Calendar, CheckCircle2, XCircle, XCircle][i]} c={['#9a9a9a', '#22c55e', '#eab308', '#ef4444'][i]} />)}</div>
-    <div className="card" style={{ padding: '22px 24px', marginBottom: 24 }}><div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}><div><h3 style={{ margin: 0, fontWeight: 600 }}>Attendance Overview</h3><p style={{ color: 'var(--mut)', margin: '12px 0 16px' }}>Your attendance is below 75%. Please improve.</p></div><b style={{ color: '#f97316', fontSize: 24 }}>66%</b></div><Bar p={66} c="#f97316" /></div>
+    <div className="card" style={{ padding: '22px 24px', marginBottom: 24 }}><div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}><div><h3 style={{ margin: 0, fontWeight: 600 }}>Attendance Overview</h3><p style={{ color: 'var(--mut)', margin: '12px 0 16px' }}>Your attendance is good. Keep it up!</p></div><b style={{ color: '#0deb45', fontSize: 24 }}>94%</b></div><Bar p={94} c="#0deb45" /></div>
     <div style={{ textAlign: 'right', marginBottom: 12 }}><select className="sel" value={m} onChange={e => setM(e.target.value)}>{['Sep', 'Aug', 'Jul'].map(x => <option key={x} value={x}>{x} 2026</option>)}</select></div>
     <div className="tw"><table><thead><tr><th>Class</th><th>Date</th><th>Status</th></tr></thead><tbody>{ds.map((d, i) => <tr key={i}><td style={{ fontWeight: 400 }}>{i + 1}</td><td>{d.toLocaleDateString('en', { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' })}</td><td><Pill t={fix[i] || (i % 3 ? 'PRESENT' : 'ABSENT')} /></td></tr>)}</tbody></table></div></Shell>;
 }
@@ -122,8 +122,8 @@ function Quiz() {
 function Profile() {
   const nav = useNavigate(); return <Shell role="s"><Crumb items={['Home', 'Profile']} /><div className="ban"><img src={LOGO} alt="" /></div><img className="pav" src={PIC} alt={SNAME} />
     <div style={{ display: 'flex', alignItems: 'flex-end', margin: '8px 0 20px' }}><div><h2 style={{ margin: 0, fontWeight: 600 }}>{SNAME}</h2><span className="pill gy" style={{ marginTop: 6 }}>Student</span></div><button className="eb" style={{ marginLeft: 'auto' }} onClick={() => toast('Edit profile is disabled in demo')}><Pencil size={12} />Edit Profile</button></div>
-    <div className="pg"><div className="card pc" style={{ alignSelf: 'start' }}><h5><Mail size={14} color="#3b82f6" />Contact Info</h5><small>Email</small><p>abdulwadoodwd511@gmail.com</p><small>Phone</small><p>03202275141</p><small>Address</small><p>Korangi Industrial Area</p></div>
-      <div><div className="card pc"><h5><User size={14} color="#3b82f6" />Personal Information</h5><div className="pg" style={{ gap: 0 }}><div><small>Gender</small><p>Male</p><small>Last Qualification</small><p>Not Provided</p></div><div><small>Date of Birth</small><p>June 30, 2008</p><small>CNIC</small><p>4260303603639</p></div></div></div>
+    <div className="pg"><div className="card pc" style={{ alignSelf: 'start' }}><h5><Mail size={14} color="#3b82f6" />Contact Info</h5><small>Email</small><p>hasnainmurtaza@gmail.com</p><small>Phone</small><p>03XXXXXXXXX</p><small>Address</small><p>Korangi Industrial Area</p></div>
+      <div><div className="card pc"><h5><User size={14} color="#3b82f6" />Personal Information</h5><div className="pg" style={{ gap: 0 }}><div><small>Gender</small><p>Male</p><small>Last Qualification</small><p>Not Provided</p></div><div><small>Date of Birth</small><p>July 17, 2008</p><small>CNIC</small><p>42XXXXXXXXXXX</p></div></div></div>
         <div className="card pc"><h5><BookOpen size={14} color="#3b82f6" />Enrolled Courses</h5><div style={{ background: 'var(--navy)', borderLeft: '3px solid #3b82f6', padding: 12, borderRadius: 4 }}><small style={{ color: 'var(--tx)', marginBottom: 6 }}>{COURSE}</small><span className="tag" style={{ fontSize: 10 }}>ENROLLED</span></div></div></div></div>
     <button className="lo" onClick={() => { localStorage.removeItem('auth'); nav('/login') }}><LogOut size={14} />Logout</button></Shell>
 }
